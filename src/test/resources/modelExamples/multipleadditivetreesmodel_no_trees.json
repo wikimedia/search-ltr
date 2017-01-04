@@ -1,0 +1,10 @@
+{
+    "multipleadditivetreesmodel_no_trees": {
+        "class":"org.wikimedia.search.ltr.model.MultipleAdditiveTreesModel",
+        "features":[
+            { "name": "matchedTitle"},
+            { "name": "constantScoreToForceMultipleAdditiveTreesScoreAllDocs"}
+        ],
+        "params":{}
+    }
+}

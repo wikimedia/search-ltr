@@ -1,0 +1,19 @@
+{
+    "test": {
+        "properties": {
+            "title": {
+                "type": "string",
+                "copy_to": "text"
+            },
+            "description": {
+                "type": "string",
+                "copy_to": "text"
+            },
+            "keywords": { "type": "string" },
+            "popularity": { "type": "integer", "store": true },
+            "normHits": { "type": "float" },
+            "isTrendy": { "type": "boolean" },
+            "text": { "type": "string" }
+        }
+    }
+}

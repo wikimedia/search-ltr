@@ -1,0 +1,46 @@
+{
+    "_DEFAULT_": {
+        "title": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 1
+            }
+        },
+        "description": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+               "value": 2
+            }
+        },
+        "keywords": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 2
+            }
+        },
+        "popularity": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 3
+            }
+        },
+        "text": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 4
+            }
+        },
+        "queryIntentPerson": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 5
+            }
+        },
+        "queryIntentCompany": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 5
+            }
+        }
+    }
+}

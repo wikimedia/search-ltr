@@ -1,0 +1,20 @@
+{
+    "_DEFAULT_": {
+        "matchedTitle": {
+            "class": "org.apache.solr.ltr.feature.SolrFeature",
+            "params": {
+                "q": {
+                    "match": {
+                        "title": "${user_query}"
+                    }
+                }
+            }
+        },
+        "popularity": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 3
+            }
+        }
+    }
+}

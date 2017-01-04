@@ -1,0 +1,16 @@
+{
+    "_DEFAULT_": {
+        "user_device_smartphone": {
+            "class":"org.wikimedia.search.ltr.feature.ExternalValueFeature",
+            "params" : {
+                "externalValue": "user_device_smartphone"
+            }
+        },
+        "user_device_tablet": {
+            "class":"org.wikimedia.search.ltr.feature.ExternalValueFeature",
+            "params" : {
+                "externalValue": "user_device_tablet"
+            }
+        }
+    }
+}

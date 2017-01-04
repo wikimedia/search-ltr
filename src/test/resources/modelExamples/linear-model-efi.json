@@ -1,0 +1,15 @@
+{
+  "linear-efi": {
+        "class":"org.apache.solr.ltr.model.LinearModel",
+        "features":[
+            {"name":"sampleConstant"},
+            {"name":"search_number_of_nights"}
+        ],
+        "params":{
+            "weights":{
+                "sampleConstant":1.0,
+                "search_number_of_nights":2.0
+            }
+        }
+    }
+}

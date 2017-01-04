@@ -1,0 +1,39 @@
+{
+    "external_model_binary_feature": {
+        "class":"org.wikimedia.search.ltr.model.MultipleAdditiveTreesModel",
+        "features":[
+            { "name": "user_device_smartphone"},
+            { "name": "user_device_tablet"}
+        ],
+        "params": {
+            "trees": [
+                {
+                    "weight" : "1f",
+                    "root": {
+                        "feature": "user_device_smartphone",
+                        "threshold": "0.5f",
+                        "left" : {
+                            "value" : "0"
+                        },
+                        "right" : {
+                            "value" : "50"
+                        }
+                    }
+                },
+                {
+                    "weight" : "1f",
+                    "root": {
+                        "feature": "user_device_tablet",
+                        "threshold": "0.5f",
+                        "left" : {
+                            "value" : "0"
+                        },
+                        "right" : {
+                            "value" : "65"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "externalmodelstore": {
+        "class":"org.wikimedia.search.ltr.model.LinearModel",
+        "store": "fstore2",
+        "features":[
+            { "name": "confidence"}
+        ],
+        "params":{
+            "weights": {
+                "confidence": 0.999
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+data
+target
+.classpath
+.settings
+.project
+
+.idea
+*.iml
+.*.swp
+.*.swo

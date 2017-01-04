@@ -1,0 +1,53 @@
+{
+    "_DEFAULT_": {
+        "popularity": {
+            "class": "org.wikimedia.search.ltr.feature.FieldValueFeature",
+            "params": { 
+                "field": "popularity",
+                "source": true
+            }
+        },
+        "isPopular": {
+            "class": "org.wikimedia.search.ltr.feature.ESQueryFeature",
+            "params": {
+                "q": {
+                    "constant_score": {
+                        "filter": {
+                            "range": {
+                                "popularity": {
+                                    "gte": 201
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "queryPartialMatch2": {
+            "class": "org.wikimedia.search.ltr.feature.ESQueryFeature",
+            "params": {
+                "q": {
+                    "match": {
+                        "description": {
+                            "query": "${user_query}",
+                            "minimum_should_match": 2
+                        }
+                    }
+                }
+            }
+        },
+        "queryPartialMatch2_1": {
+            "class": "org.wikimedia.search.ltr.feature.ESQueryFeature",
+            "params": {
+                "q": {
+                    "match": {
+                        "description": {
+                            "query": "${user_query}",
+                            "minimum_should_match": 2
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

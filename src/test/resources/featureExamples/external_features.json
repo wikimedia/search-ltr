@@ -1,0 +1,71 @@
+{
+    "_DEFAULT_": {
+        "matchedTitle": {
+            "class" : "org.wikimedia.search.ltr.feature.ESQueryFeature",
+            "params" : {
+                "q": {
+                    "constant_score": {
+                        "filter": {
+                            "match": {"title": "${user_query}"}
+                        }
+                    }
+                }
+            }
+        },
+        "popularity": {
+            "class" : "org.wikimedia.search.ltr.feature.ESQueryFeature",
+            "params" : {
+                "q": {
+                    "function_score": {
+                        "query": { "match_all": {}},
+                        "functions": [{
+                            "field_value_factor": {
+                                "field": "popularity"
+                            }
+                        }]
+                    }
+                }
+            }
+        },
+        "titlePhraseMatch": {
+            "class" : "org.wikimedia.search.ltr.feature.ESQueryFeature",
+            "params" : {
+                "q": {
+                    "constant_score": {
+                        "filter": {
+                            "match_phrase": {
+                                "title": "${user_query}"
+                           }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "fstore2": {
+        "confidence": {
+            "class" : "org.wikimedia.search.ltr.feature.ExternalValueFeature",
+            "params" : {
+                "externalValue" : "myconf"
+            }
+        }
+    },
+    "fstore3": {
+        "occurrences": {
+            "class" : "org.wikimedia.search.ltr.feature.ExternalValueFeature",
+            "params" : {
+                "externalValue" : "myOcc",
+                "required" : false
+            }
+        }
+    },
+    "fstore4": {
+        "popularity": {
+            "class" : "org.wikimedia.search.ltr.feature.ExternalValueFeature",
+            "params" : {
+                "externalValue" : "myPop",
+                "required" : true
+            }
+        }
+    }
+}

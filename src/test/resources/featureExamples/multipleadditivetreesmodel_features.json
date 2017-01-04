@@ -1,0 +1,24 @@
+{
+    "_DEFAULT_": {
+        "matchedTitle": {
+            "class": "org.wikimedia.search.ltr.feature.ESQueryFeature",
+            "params": {
+                "q": {
+                    "constant_score": {
+                        "filter": {
+                            "match": {
+                                "title": "${user_query}"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "constantScoreToForceMultipleAdditiveTreesScoreAllDocs": {
+            "class": "org.wikimedia.search.ltr.feature.ValueFeature",
+            "params": {
+                "value": 1
+            }
+        }
+    }
+}

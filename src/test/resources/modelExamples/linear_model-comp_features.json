@@ -1,0 +1,19 @@
+{
+    "linear": {
+        "class":"org.wikimedia.search.ltr.model.LinearModel",
+        "features":[
+            { "name": "popularity" },
+            { "name": "isPopular" },
+            { "name": "queryPartialMatch2" },
+            { "name": "queryPartialMatch2_1" }
+        ],
+        "params":{
+            "weights": {
+                "popularity": 1,
+                "isPopular": 1,
+                "queryPartialMatch2": 1,
+                "queryPartialMatch2_1": 1
+            }
+        }
+    }
+}

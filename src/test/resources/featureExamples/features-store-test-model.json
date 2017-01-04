@@ -1,0 +1,40 @@
+{
+    "test": {
+        "constant1": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 1
+            }
+        },
+        "constant2": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 2
+            }
+        },
+        "constant3": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 3
+            }
+        },
+        "constant4": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 4
+            }
+        },
+        "constant5": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 5
+            }
+        },
+        "pop": {
+            "class": "org.apache.solr.ltr.feature.FieldValueFeature",
+            "params": {
+                "field": "popularity"
+            }
+        }
+    }
+}

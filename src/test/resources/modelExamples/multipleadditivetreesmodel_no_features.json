@@ -1,0 +1,15 @@
+{
+    "multipleadditivetreesmodel_no_features": {
+        "class":"org.wikimedia.search.ltr.model.MultipleAdditiveTreesModel",
+        "params":{
+            "trees": [
+                {
+                    "weight" : "2f",
+                    "root": {
+                        "value" : "-10"
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "_DEFAULT_": {
+        "sampleConstant": {
+            "class": "org.apache.solr.ltr.feature.ValueFeature",
+            "params": {
+                "value": 5
+            }
+        },
+        "search_number_of_nights": {
+            "class":"org.apache.solr.ltr.feature.ExternalValueFeature",
+            "params" : {
+                "externalValue": "search_number_of_nights"
+            }
+        }
+    }
+}

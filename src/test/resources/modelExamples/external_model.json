@@ -1,0 +1,26 @@
+{
+    "externalmodel": {
+        "class":"org.wikimedia.search.ltr.model.LinearModel",
+        "features":[
+            { "name": "matchedTitle"}
+        ],
+        "params":{
+            "weights": {
+                "matchedTitle": 0.999
+            }
+        }
+    },
+    "externalmodel_w_pop": {
+        "class":"org.wikimedia.search.ltr.model.LinearModel",
+        "features":[
+            { "name": "matchedTitle"},
+            { "name": "popularity" }
+        ],
+        "params":{
+            "weights": {
+                "matchedTitle": 0.999,
+                "popularity": 1.0
+            }
+        }
+    }
+}
