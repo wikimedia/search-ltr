@@ -30,8 +30,6 @@ import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.Scorer;
 import org.apache.lucene.search.Weight;
-import org.elasticsearch.common.logging.ESLogger;
-import org.elasticsearch.common.logging.ESLoggerFactory;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.common.xcontent.ToXContent;
 import org.elasticsearch.common.xcontent.XContentBuilder;
@@ -63,7 +61,6 @@ import org.elasticsearch.index.query.ParsedQuery;
  * </pre>
  **/
 public class ESQueryFeature extends Feature {
-    private static final ESLogger log = ESLoggerFactory.getLogger(ESQueryFeature.class.getCanonicalName());
     private static final Pattern requiredRegex = Pattern.compile("\\G.*\\$\\{([\\w\\d]+)\\}");
 
     private final String q;
@@ -128,7 +125,6 @@ public class ESQueryFeature extends Feature {
                 // json string.
                 replaced = replaced.replace("${" + key + "}", value.replace("\"", "\\\""));
             }
-            log.info(replaced);
             try {
                 final ParsedQuery parsed = queryParserService.parse(replaced.getBytes("UTF8"));
                 query = parsed.query();
