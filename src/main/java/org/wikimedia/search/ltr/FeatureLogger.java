@@ -135,7 +135,7 @@ public abstract class FeatureLogger {
             }
             builder.startObject("vec");
             for (FeatureInfo featInfo : featuresInfo) {
-                if (featInfo.isUsed() || isDense) {
+                if (featInfo != null && (featInfo.isUsed() || isDense)) {
                     builder.field(featInfo.getName(), featInfo.getValue());
                 }
             }
@@ -177,7 +177,7 @@ public abstract class FeatureLogger {
                 sb.append("_marker").append(keyValueSep).append(marker).append(featureSep);
             }
             for (FeatureInfo featInfo : featuresInfo) {
-                if (featInfo.isUsed() || isDense) {
+                if (featInfo != null && (featInfo.isUsed() || isDense)) {
                     sb.append(featInfo.getName()).append(keyValueSep).append(featInfo.getValue());
                     sb.append(featureSep);
                 }
